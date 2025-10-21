@@ -1,0 +1,1 @@
+python ../src/init_token_emb.py --backbone Salesforce/codet5-small --datasets sports --data_path ../data/ --prompt_file ../code_style_prompt.txt --tasks content_only --item_indexing independent --sample_prompt 0 --sample_num 0 --batch_size 64

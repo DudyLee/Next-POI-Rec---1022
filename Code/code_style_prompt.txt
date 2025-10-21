@@ -1,0 +1,55 @@
+sequential_python; seen; # Purchase history of user_{user_id}\nhistory = [{history}]\n# Recommend next item for him\nnext_item = ; {target_id}
+sequential_python; seen; # Considering user_{user_id} has interacted\nhistory = [{history}]\n# What is the next recommendation for the user?\nnext_item = ; {target_id}
+sequential_python; seen; # User_{user_id} has purchased\nhistory = [{history}]\n# Predict next possible item to be bought by the user\nnext_item = ; {target_id}
+sequential_python; seen; # According to what items user_{user_id} has purchased\nhistory = [{history}]\n# What is the next item expected to be bought\nnext_item = ; {target_id}
+sequential_python; seen; # By analyzing the user_{user_id} 's purchase history\nhistory = [{history}]\n# What else do you think is necessary for the user\nnext_item = ; {target_id}
+sequential_python; seen; # I found the purchase history for user_{user_id}\nhistory = [{history}]\n# Please recommend the next item for him\nnext_item = ; {target_id}
+sequential_python; seen; # Here is the purchase history for user_{user_id}\nhistory = [{history}]\n# The next item he will bought is\nnext_item = ; {target_id}
+sequential_python; seen; # User_{user_id}'s purchase history\nhistory = [{history}]\n# Can you recommend the next item for him\nnext_item = ; {target_id}
+sequential_python; seen; # Given user_{user_id}'s purchase history\nhistory = [{history}]\n# Predict the next item he would bought next time\nnext_item = ; {target_id}
+sequential_python; seen; # Considering user_{user_id}'s purchase history\nhistory = [{history}]\n# What item would you suggest to try\nnext_item = ; {target_id}
+sequential_python_constraint; seen; # The purchase history of user_{user_id}\nhistory = [{history}]\n# Recommend next item for him, excluding previously bought items\nnext_item = ; {target_id}
+sequential_multilingual; seen; # The purchase history of user_{user_id}\nhistory = [{history}]\n# Recommend next item for him\nnext_item = ; {target_id}
+sequential_multilingual; seen; // Considering user_{user_id} has interacted\nlet interacted_items = [{history}];\n// What is the next recommendation for the user?\nlet next_item = ; {target_id}
+sequential_multilingual; seen; // user_{user_id} has purchased\nhistory := []interface{{}}{{{history}}}\n// Predict next possible item to be bought by the user\nnext_item := ; {target_id}
+sequential_multilingual; seen; // According to what items user_{user_id} has purchased\nObject[] bought_items = {{{history}}};\n// What is the next item expected to be bought\nObject next_item = ; {target_id};
+sequential_multilingual; seen; // By analyzing the user_{user_id} 's purchase history\n$bought_items = array({history});\n// What else do you think is necessary for the user\n$next_item = ; {target_id};
+sequential_multilingual; seen; // I found the purchase history for user_{user_id}\nvoid* bought_items[] = {{{history}}};\n// Please recommend the next item for him\nvoid* next_item = ; {target_id};
+sequential_multilingual; seen; // Here is the purchase history for user_{user_id}\nobject[] bought_items = {{{history}}};\n// The next item he will bought is\nobject next_item = ; {target_id};
+sequential_multilingual; seen; # User_{user_id}'s purchase history\nhistory = {{'history': {history}}}\n# Can you recommend the next item for him\nnext_item = ; {target_id}
+sequential_multilingual; seen; # Given user_{user_id}'s purchase history\nhistory = {{'item_ids' => [{history}]}}\n# Predict the next item he would bought next time\nnext_item = ; {target_id}
+sequential_multilingual; seen; // Considering user_{user_id}'s purchase history\n$bought_items = array('item_ids' => array({history}));\n// What item would you suggest to try\n$next_item = ; {target_id};
+sequential_python_constraint; seen; # Considering user_{user_id} has interacted\nhistory = [{history}]\n# What is the next recommendation for the user, without including any past purchases?\nnext_item = ; {target_id}
+sequential_python_constraint; seen; # User_{user_id} has purchased\nhistory = [{history}]\n# Predict next possible item to be bought by the user, ensure it's not an item already bought\nnext_item = ; {target_id}
+sequential_python_constraint; seen; # According to what items user_{user_id} has purchased\nhistory = [{history}]\n# What is the next item expected to be bought, do not recommend items already bought\nnext_item = ; {target_id}
+sequential_python_constraint; seen; # By analyzing the user_{user_id} 's purchase history\nhistory = [{history}]\n# What else do you think is necessary for the user, excluding items already bought\nnext_item = ; {target_id}
+sequential_python_constraint; seen; # I found the purchase history for user_{user_id}\nhistory = [{history}]\n# Please recommend the next item for him, excluding any previously purchased items\nnext_item = ; {target_id}
+sequential_python_constraint; seen; # Here is the purchase history for user_{user_id}\nhistory = [{history}]\n# The next item he will buy is, ensure it's not one he already owns\nnext_item = ; {target_id}
+sequential_python_constraint; seen; # User_{user_id}'s purchase history\nhistory = [{history}]\n# Can you recommend the next item for him, without recommending items he has already bought?\nnext_item = ; {target_id}
+sequential_python_constraint; seen; # Given user_{user_id}'s purchase history\nhistory = [{history}]\n# Predict the next item he would buy next time, excluding any repeat purchases\nnext_item = ; {target_id}
+sequential_python_constraint; seen; # Considering user_{user_id}'s purchase history\nhistory = [{history}]\n# What item would you suggest to try, not including any items from the purchase history?\nnext_item = ; {target_id}
+with_content; seen; #Here are the item info\n{items_content_dict}\n# The purchase history of user_{user_id}\nhistory = [{history}]\n# Recommend next item for him\nnext_item = ; {target}
+with_content; seen; #Here are the item info\n{items_content_class}\n# The purchase history of user_{user_id}\nhistory = [{history}]\n# Recommend next item for him\nnext_item = ; {target}
+temp; seen; # The purchase history of user_{user_id}\nhistory = [{history}]\n# Recommend next item for him\nnext_item = item_ ; {target_id}
+independent; seen; # The purchase history of user_{user_id}\nhistory = [{history}]\n# Recommend next item for him\nnext_item = ; {target}
+direct; seen; # Recommend next item for {user_id}\nnext_item = ; {target}
+independent_with_candidates; seen; # The purchase history of user_{user_id}\nhistory = [{history}]\n # Candidates of next item\ncandidates = [{candidates}]\n# Recommend next item for him\nnext_item = ; {target}
+sub_content_to_id; seen; <extra_id_0>{sub_content}; <extra_id_0> {item_id} <extra_id_1> 
+single_sequential; seen; Considering {dataset} user_{user_id} has interacted with {dataset} items {history} . What is the next recommendation for the user ?; {dataset} {target}
+fill_mask; seen; # The purchase history of user_{user_id}\nhistory = [{history}]\n# Recommend next item for him\nnext_item = <extra_id_0>; <extra_id_0>{target}
+straightforward; seen; # What should we recommend for user_{user_id}?\nrecommend_item = ; {target}
+straightforward; seen; # user_{user_id} is looking for some items. Do you have any recommendations?\nrecommend_item = ; {target}
+straightforward; seen; # Do you have any suggested items for user_{user_id}?\nrecommend_item = ; {target}
+straightforward; seen; # Which recommendation should we provide to user_{user_id}?\nrecommend_item = ; {target}
+straightforward; seen; # How can we assist user_{user_id} with a recommendation?\nrecommend_item = ; {target}
+straightforward; seen; # What would be a suitable recommendation for user_{user_id}?\nrecommend_item = ; {target}
+straightforward; seen; # What would be a helpful recommendation for user_{user_id}?\nrecommend_item = ; {target}
+straightforward; seen; # Can you recommend an item for user_{user_id}?\nrecommend_item = ; {target}
+straightforward; seen; # Based on user_{user_id}'s interests and requirements, what item would you suggest to try?\nrecommend_item = ; {target}
+straightforward; seen; # For user_{user_id}, what item stands out as a top recommendation that they should consider?\nrecommend_item = ; {target}
+content_only; seen; item_info = {{\n{content}}}; {item_id}
+content_to_id; seen; item_info = {{\n{content}}}\nitem_info['item_id'] = ; {item_id}
+category_to_id; seen; item_list = [{item_list_with_other_category}]\n# item in {category}\nitem_id = ; {item_id}
+brand_to_id; seen; item_list = [{item_list_with_other_brand}]\n# item of "{brand}" brand\nitem_id = ; {item_id}
+lowest_price_id; seen; item_list = [{item_list_with_higher_price}]\n# item with lowest price\nitem_id = ; {item_id}
+highest_price_id; seen; item_list = [{item_list_with_lower_price}]\n# item with highest price\nitem_id = ; {item_id}

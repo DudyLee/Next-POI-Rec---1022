@@ -1,0 +1,29 @@
+sequential; seen; Considering user_{user_id} has interacted with items {history} . What is the next recommendation for the user ?; {target_id}
+sequential; seen; Here is the purchase history of user_{user_id} : items {history} . I wonder what is the next recommended item for the user .; {target_id}
+sequential; seen; user_{user_id} has purchased items {history} . Predict next possible item to be bought by the user ?; {target_id}
+sequential; seen; I find the purchase list of user_{user_id} : items {history} . I wonder what other itmes does the user need . Can you help me decide ?; {target_id}
+sequential; seen; According to what items user_{user_id} has purchased : items {history} . Can you recommend another item to the user ?; {target_id}
+sequential; seen; What would user_{user_id} be likely to purchase next after buying items {history} .; {target_id}
+sequential; seen; By analyzing the user_{user_id} 's purchase of items {history} . What is the next item expected to be bought ?; {target_id}
+sequential; seen; Can you recommend the next item for user_{user_id} , given the user 's purchase of items {history} .; {target_id}
+sequential; seen; After buying items {history} . What is the next item that could be recommended for user_{user_id} ?; {target_id}
+sequential; seen; The user_{user_id} has bought items : items {history} . What else do you think is necessary for the user ?; {target_id}
+sequential; unseen; What is the top recommended item for user_{user_id} who interacted with items {history} .; {target_id}
+straightforward; seen; What should we recommend for user_{user_id} ?; {target_id}
+straightforward; seen; user_{user_id} is looking for some items . Do you have any recommendations ?; {target_id}
+straightforward; seen; Do you have any suggested items for user_{user_id} ?; {target_id}
+straightforward; seen; Which recommendation should we provide to user_{user_id} ?; {target_id}
+straightforward; seen; How can we assist user_{user_id} with a recommendation ?; {target_id}
+straightforward; seen; What would be a suitable recommendation for user_{user_id} ?; {target_id}
+straightforward; seen; What would be a helpful recommendation for user_{user_id} ?; {target_id}
+straightforward; seen; Can you recommend an item for user_{user_id} ?; {target_id}
+straightforward; seen; Based on user_{user_id} 's interests and requirements , what item would you suggest to try ?; {target_id}
+straightforward; seen; For user_{user_id} , what item stands out as a top recommendation that they should consider ?; {target_id}
+straightforward; unseen; What is the top recommendation for user_{user_id} ?; {target_id}
+content_only; seen; Here are some infomation about the item : {language_style_content}; {item_id}
+content_to_id; seen; Here are some infomation about the item : {language_style_content}. Which item is it ?; {item_id}
+category_to_id; seen; Here are some items: {item_list_with_other_category}. Which item is in {category} ?; {item_id}
+brand_to_id; seen; Here are some items: {item_list_with_other_brand}. Which item is of "{brand}" brand ?; {item_id}
+lowest_price_id; seen; Here are some items: {item_list_with_higher_price}. Which item has the lowest price ?; {item_id}
+highest_price_id; seen; Here are some items: {item_list_with_lower_price}. Which item has the highest price ?; {item_id}
+highest_salesrank_id; seen; Here are some items: {item_list_with_lower_salesrank}. Which item has the highest salesRank ?; {item_id}
